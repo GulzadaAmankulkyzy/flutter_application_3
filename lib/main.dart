@@ -38,13 +38,27 @@ class _MeninTirkememState extends State<MeninTirkemem> {
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-            setState(() {});
-            counter++;
-            print(counter);
-          },
+        floatingActionButton: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              child: Icon(Icons.add),
+              onPressed: () {
+                setState(() {});
+                counter++;
+                print(counter);
+              },
+            ),
+            const SizedBox(height: 10),
+            FloatingActionButton(
+              child: Icon(Icons.remove),
+              onPressed: () {
+                setState(() {});
+                counter--;
+                print(counter);
+              },
+            ),
+          ],
         ),
       ),
     );
